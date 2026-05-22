@@ -62,3 +62,13 @@ input, button {
   }
 }
 
+button {
+  background: var(--color-brand);
+  color: #FFF;
+  font-weight: 600;
+}
+
+button:hover {
+  background: var(--color-brand-hover);
+  transition: background 0.4s;
+}
