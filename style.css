@@ -85,6 +85,8 @@ transition: background 0.4s;
         align-items: center;
         border-radius: 1.2rem;
         color: var(--content-secondary);
+        line-height: 2.4rem;
+        box-shadow: 0 2px 6px rgba(8, 11, 18, 0.2);
 
         .checkbox-customizada {
             width: 1.6rem;
@@ -96,9 +98,34 @@ transition: background 0.4s;
         button {
             border: none;
             background: none;
+            cursor: pointer;
+
+            img {
+                width: 1.6rem;
+                opacity: 0.7;
+            }
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+
+        div:has(input:checked) {
+            .checkbox-customizada {
+                background: var(--color-brand);
+                border-color: var(--color-brand);
+                transition: 0.2s;
+            }
+
+            label {
+                text-decoration: line-through;
+            }
+        }
+
+        input {
+            display: none;
         }
     }
 }
-
-
-
