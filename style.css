@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Inter, sans-serif;
 }
 
-:root{
+:root {
     font-size: 62.5%;
 
     --background-primary: #F4F5FB;
@@ -21,56 +21,58 @@
     --border-hover: #B9C2D0;
 }
 
-body{
+body {
     font-size: 1.6rem;
     background: var(--background-primary);
     padding-inline: 3.2rem;
 }
 
-header{
+header {
     display: flex;
     justify-content: center;
     margin-block: 2.5rem 4rem;
 }
 
-.adicionar-item{
-    h1{
-        font-size: 2.rem;
-    margin-bottom: 4.4rem;
-}
-input, button {
-  width: 100%;
-  font-size: 1.6rem;
-  padding: 1.2rem 1.8rem;
-  border-radius: 1.2rem;
-  border: none;
-  outline: none;
-}
-input{
-  border: 2px solid var(--border-primary);
-  margin-bottom: 1.6rem;
-  color: var(--content-primary)
-}
+.adicionar-item {
+    h1 {
+        font-size: 2.4rem;
+        margin-bottom: 4.4rem;
+    }
 
-input:focus {
-  border-color: var(--color-brand);
-}
+    input,
+    button {
+        width: 100%;
+        font-size: 1.6rem;
+        padding: 1.2rem 1.8rem;
+        border-radius: 1.2rem;
+        border: none;
+        outline: none;
+    }
 
-input::placeholder{
-  color: var(--content-tertiary);
-}
+    input {
+        border: 2px solid var(--border-primary);
+        margin-bottom: 1.6rem;
+        color: var(--content-primary);
+    }
 
+    input:focus {
+        border-color: var(--color-brand);
+    }
 
-button {
-background: var(--color-brand);
-color: #FFF;
-font-weight: 600;
-}
+    input::placeholder {
+        color: var(--content-tertiary);
+    }
 
-button:hover {
-background: var(--color-brand-hover);
-transition: background 0.4s;
-}
+    button {
+        background: var(--color-brand);
+        color: #FFF;
+        font-weight: 600;
+    }
+
+    button:hover {
+        background: var(--color-brand-hover);
+        transition: background 0.4s;
+    }
 }
 
 .lista {
@@ -86,7 +88,7 @@ transition: background 0.4s;
         border-radius: 1.2rem;
         color: var(--content-secondary);
         line-height: 2.4rem;
-        box-shadow: 0 2px 6px rgba(8, 11, 18, 0.2);
+        box-shadow: 0 2px 8px rgba(8, 11, 18, 0.2);
 
         .checkbox-customizada {
             width: 1.6rem;
@@ -126,6 +128,33 @@ transition: background 0.4s;
 
         input {
             display: none;
+        }
+
+        label{
+            cursor: pointer;
+        }
+    }
+}
+
+@media(min-width: 630px) {
+    main {
+        max-width: 62.7rem;
+        margin-inline: auto;
+    }
+
+    .adicionar-item div {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 1.6rem;
+
+        input {
+            grid-column: 1 / 8;
+            margin: 0;
+        }
+
+        button {
+            grid-column: 8 / 11;
+            cursor: pointer;
         }
     }
 }
